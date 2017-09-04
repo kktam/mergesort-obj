@@ -1,6 +1,6 @@
 {
   "name": "mergesort-obj",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "merge sort with objects support",
   "homepage": "",
   "author": {
@@ -13,7 +13,11 @@
   ],
   "main": "lib/index.js",
   "keywords": [
-    "node","library","merge","sort","algorithm"
+    "node",
+    "library",
+    "merge",
+    "sort",
+    "algorithm"
   ],
   "devDependencies": {
     "coveralls": "^2.13.1",
