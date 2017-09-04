@@ -1,0 +1,43 @@
+{
+  "name": "mergesort-obj",
+  "version": "0.0.0",
+  "description": "merge sort with objects support",
+  "homepage": "",
+  "author": {
+    "name": "Nelson Tam",
+    "email": "nkltam2003@gmail.com",
+    "url": ""
+  },
+  "files": [
+    "lib"
+  ],
+  "main": "lib/index.js",
+  "keywords": [
+    "node","library","merge","sort","algorithm"
+  ],
+  "devDependencies": {
+    "coveralls": "^2.13.1",
+    "nsp": "^2.6.3",
+    "eslint": "^4.1.0",
+    "eslint-config-xo-space": "^0.16.0",
+    "jest": "^19.0.2",
+    "jest-cli": "^20.0.0"
+  },
+  "scripts": {
+    "prepublish": "nsp check",
+    "pretest": "eslint . --fix",
+    "test": "jest"
+  },
+  "eslintConfig": {
+    "extends": "xo-space",
+    "env": {
+      "jest": true,
+      "node": true
+    }
+  },
+  "repository": "kktam/mergesort-obj",
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Nelson Tam",
+      "authorEmail": "nkltam2003@gmail.com",
+      "authorUrl": ""
+    }
+  }
+}
