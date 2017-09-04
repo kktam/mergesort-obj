@@ -12,7 +12,25 @@ $ npm install --save mergesort-obj
 ```js
 const mergesortObj = require('mergesort-obj');
 
-mergesortObj('Rainbow');
+// define a sorting function
+var sortAsc = function (node1, node2) {
+  if (node1 < node2) {
+    return mergesortObj.CMP_LESS_THAN;
+  } else if (node1 === node2) {
+    return mergesortObj.CMP_EQUAL;
+  }
+  return mergesortObj.CMP_GREATER_THAN;
+};
+
+// define an array
+var elm = [3, 2, 1];
+
+// sort the array
+var results = mergesortObj.sort(elm, sortAsc);
+
+foreach (var item in results) {
+    console.log(item);
+}
 ```
 ## License
 
