@@ -63,6 +63,27 @@ var results = merge.sortObj(elm, attr, merge.DIR_ASC);
 
 to use sortObj() function, provide the name of the attribute to be used as sorting key (attr), and the direction, DIR_ASC for ascending sort, and DIR_DSC for descending sort.
 
+To further support complex sorting even more, the helper function sortObjMultiKey() is introduced to arrange sorting on multiple keys.
+
+To use this function, one must supply first the array, and second the "order" definition structure. The order structure is an array of objects with the following attributes:
+
+```
+[{attr: 'name of attribute', dir: direction}, { ... } , ...];
+```
+
+attr is the exact spelling of the attribute to use as key, and dir is the direction of the search, either DIR_ASC (ascending), or DIR_DSC (descending).
+
+The sort order is defined by order of the element position in the array, i.e. the first object in the array is the key that will be sorted first. If the algorithm cannot determine precedence with the first key, it will move the second, third, and so forth, until either all the keys have run out, or an decision has been made.
+
+The following is an example of setting up sorting using 2 keys with mixed direction.
+
+```
+    // Order by firstname, and then lastname
+    var order = [{attr: 'firstname', dir: merge.DIR_ASC}, {attr: 'lastname', dir: merge.DIR_DSC}];
+    var elm = [{id: 1, firstname: 'George', lastname: 'Washington'}, {id: 2, firstname: 'Ronald', lastname: 'Reagan'}, {id: 3, firstname: 'Albert', lastname: 'Einstein'}, {id: 4, firstname: 'George', lastname: 'Michael'}];
+    var results = merge.sortObjMultiKey(elm, order);
+```
+
 ## License
 
 MIT © [Nelson Tam]()
